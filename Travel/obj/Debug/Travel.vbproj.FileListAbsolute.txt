@@ -28,3 +28,4 @@ C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Travel\Travel\obj\Debug\T
 C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Travel\Travel\obj\Debug\Travel.Resources.resources
 C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Travel\Travel\obj\Debug\Travel.Pelanggan.resources
 C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Travel\Travel\obj\Debug\Travel.vbproj.GenerateResource.Cache
+C:\Users\Andreas\Documents\Visual Studio 2010\Projects\Travel\Travel\obj\Debug\Travel.Transaksi.resources
