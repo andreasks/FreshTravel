@@ -44,19 +44,20 @@ Partial Class master_hotel
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Edit = New System.Windows.Forms.GroupBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Edit.SuspendLayout()
         Me.SuspendLayout()
@@ -235,6 +236,7 @@ Partial Class master_hotel
         '
         'Edit
         '
+        Me.Edit.Controls.Add(Me.Label17)
         Me.Edit.Controls.Add(Me.Button1)
         Me.Edit.Controls.Add(Me.TextBox12)
         Me.Edit.Controls.Add(Me.ComboBox2)
@@ -256,87 +258,21 @@ Partial Class master_hotel
         Me.Edit.Text = "Edit Data Hotel"
         Me.Edit.Visible = False
         '
-        'Label11
+        'Button1
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(82, 59)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(63, 13)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Nama Hotel"
+        Me.Button1.Location = New System.Drawing.Point(285, 264)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Save"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label12
+        'TextBox12
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(82, 89)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(44, 13)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Provinsi"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(82, 119)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(29, 13)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Kota"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(82, 149)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(47, 13)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "Standart"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(82, 179)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(46, 13)
-        Me.Label15.TabIndex = 4
-        Me.Label15.Text = "Superior"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(82, 209)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(40, 13)
-        Me.Label16.TabIndex = 5
-        Me.Label16.Text = "Deluxe"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(154, 56)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox8.TabIndex = 6
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(154, 116)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox9.TabIndex = 7
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(154, 146)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox10.TabIndex = 8
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Location = New System.Drawing.Point(154, 176)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox11.TabIndex = 9
+        Me.TextBox12.Location = New System.Drawing.Point(154, 206)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox12.TabIndex = 23
         '
         'ComboBox2
         '
@@ -350,21 +286,96 @@ Partial Class master_hotel
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox2.TabIndex = 22
         '
-        'TextBox12
+        'TextBox11
         '
-        Me.TextBox12.Location = New System.Drawing.Point(154, 206)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox12.TabIndex = 23
+        Me.TextBox11.Location = New System.Drawing.Point(154, 176)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox11.TabIndex = 9
         '
-        'Button1
+        'TextBox10
         '
-        Me.Button1.Location = New System.Drawing.Point(285, 264)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 24
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TextBox10.Location = New System.Drawing.Point(154, 146)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox10.TabIndex = 8
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(154, 116)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox9.TabIndex = 7
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(154, 56)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox8.TabIndex = 6
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(82, 209)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(40, 13)
+        Me.Label16.TabIndex = 5
+        Me.Label16.Text = "Deluxe"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(82, 179)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(46, 13)
+        Me.Label15.TabIndex = 4
+        Me.Label15.Text = "Superior"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(82, 149)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(47, 13)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "Standart"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(82, 119)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(29, 13)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Kota"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(82, 89)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(44, 13)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "Provinsi"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(82, 59)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(63, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Nama Hotel"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(84, 33)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(45, 13)
+        Me.Label17.TabIndex = 25
+        Me.Label17.Text = "Label17"
         '
         'master_hotel
         '
@@ -439,4 +450,5 @@ Partial Class master_hotel
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class

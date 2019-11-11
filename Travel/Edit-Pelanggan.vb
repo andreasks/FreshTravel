@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Edit_Pelanggan
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        xCommand = New MySqlCommand("update member set nama_member = '" + TextBox1.Text + "', tanggal_lahir = '" + DateTimePicker1.Value.ToString("yyyy-MM-dd") + "', alamat = '" + TextBox2.Text + "', phone ='" + TextBox3.Text + "', organisasi = '" + TextBox4.Text + "' where id_member = " + Label6.Text + " ", xConnection)
+        xCommand = New MySqlCommand("update member set nama_member = '" + TextBox1.Text + "', tanggal_lahir = '" + DateTimePicker1.Value.ToString("yyyy-MM-dd") + "', alamat = '" + TextBox2.Text + "', phone ='" + TextBox3.Text + "', organisasi = '" + TextBox4.Text + "' where id = " + Label6.Text + " ", xConnection)
         xCommand.ExecuteNonQuery()
         Pelanggan.Enabled = True
         Me.Close()

@@ -8,7 +8,7 @@ Public Class Pelanggan
 
     Private Sub isi_dgv()
         xDataSet.Clear()
-        xAdapter = New MySqlDataAdapter("SELECT id_member, nama_member, tanggal_lahir, alamat, phone, organisasi FROM member ", xConnection)
+        xAdapter = New MySqlDataAdapter("SELECT id, nama_member, tanggal_lahir, alamat, phone, organisasi FROM member ", xConnection)
         xAdapter.Fill(xDataSet, "member")
         xView = xDataSet.Tables("member").DefaultView
         DataGridView1.DataSource = xView
@@ -35,7 +35,7 @@ Public Class Pelanggan
 
     Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
         xDataSet.Clear()
-        xAdapter = New MySqlDataAdapter("SELECT id_member, nama_member, tanggal_lahir, alamat, phone, organisasi FROM member  " & "WHERE nama_member LIKE '%" & TextBox5.Text & "%'", xConnection)
+        xAdapter = New MySqlDataAdapter("SELECT id, nama_member, tanggal_lahir, alamat, phone, organisasi FROM member  " & "WHERE nama_member LIKE '%" & TextBox5.Text & "%'", xConnection)
         xAdapter.Fill(xDataSet, "member")
         xView = xDataSet.Tables("member").DefaultView
         DataGridView1.DataSource = xView
@@ -59,7 +59,7 @@ Public Class Pelanggan
         Me.Enabled = False
         If DataGridView1.CurrentRow.Index <> DataGridView1.NewRowIndex Then
 
-            Dim edit As String = "SELECT id_member, nama_member, tanggal_lahir, alamat, phone, organisasi  FROM member where id_member ='" & DataGridView1.Item(0, DataGridView1.CurrentRow.Index).Value & "'"
+            Dim edit As String = "SELECT id, nama_member, tanggal_lahir, alamat, phone, organisasi  FROM member where id_member ='" & DataGridView1.Item(0, DataGridView1.CurrentRow.Index).Value & "'"
             xCommand = New MySqlCommand(edit, xConnection)
             xReader = xCommand.ExecuteReader()
             'DataGridView1.Visible = True
@@ -79,7 +79,7 @@ Public Class Pelanggan
 
     Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
         xDataSet.Clear()
-        xAdapter = New MySqlDataAdapter("SELECT id_member, nama_member, tanggal_lahir, alamat, phone, organisasi FROM member  " & "WHERE organisasi LIKE '%" & TextBox6.Text & "%'", xConnection)
+        xAdapter = New MySqlDataAdapter("SELECT id, nama_member, tanggal_lahir, alamat, phone, organisasi FROM member  " & "WHERE organisasi LIKE '%" & TextBox6.Text & "%'", xConnection)
         xAdapter.Fill(xDataSet, "member")
         xView = xDataSet.Tables("member").DefaultView
         DataGridView1.DataSource = xView
@@ -99,5 +99,33 @@ Public Class Pelanggan
 
     Private Sub Pelanggan_EnabledChanged(sender As Object, e As EventArgs) Handles Me.EnabledChanged
         isi_dgv()
+    End Sub
+
+    Private Sub DataGridView1_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        connectDatabase()
+        Edit_Pelanggan.Show()
+        Me.Enabled = False
+        If DataGridView1.CurrentRow.Index <> DataGridView1.NewRowIndex Then
+
+            Dim edit As String = "SELECT id, nama_member, tanggal_lahir, alamat, phone, organisasi  FROM member where id ='" & DataGridView1.Item(0, DataGridView1.CurrentRow.Index).Value & "'"
+            xCommand = New MySqlCommand(edit, xConnection)
+            xReader = xCommand.ExecuteReader()
+            'DataGridView1.Visible = True
+
+            If xReader.Read Then
+                Edit_Pelanggan.Label6.Text = xReader.GetValue(0)
+                Edit_Pelanggan.TextBox1.Text = xReader.GetValue(1)
+                Edit_Pelanggan.DateTimePicker1.Value = xReader.GetValue(2)
+                Edit_Pelanggan.TextBox2.Text = xReader.GetValue(3)
+                Edit_Pelanggan.TextBox3.Text = xReader.GetValue(4)
+                Edit_Pelanggan.TextBox4.Text = xReader.GetValue(5)
+            End If
+
+        End If
+        xReader.Close()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class
